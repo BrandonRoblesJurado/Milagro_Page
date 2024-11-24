@@ -185,7 +185,7 @@ a:focus {
 }
 
 .nav-bar.nav-sticky {
-    position: fixed; /* Posicionamiento fijo para la barra de navegación */
+    position: sticky; /* Posicionamiento fijo para la barra de navegación */
     top: 0; /* Posición en la parte superior */
     width: 100%; /* Ancho de la barra de navegación */
     padding: 10px 0; /* Espaciado vertical */
