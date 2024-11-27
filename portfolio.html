@@ -24,23 +24,25 @@
 </head>
 
 <body>
-     <!-- Botón para abrir el widget con una imagen -->
-  <button class="open-btn" onclick="openWidget()">
-    <img src="img\1.png" alt="Abrir Widget">
-  </button>
-
-  <!-- Widget ventana emergente -->
-  <div id="popup-widget" class="popup-widget">
-    <!-- Botón para cerrar el widget -->
-    <button class="close-btn" onclick="closeWidget()">✖</button>
-
-    <!-- Contenido del widget: Incrustar la web -->
-    <iframe src="https://chatbot-kdxwd3p6hjwm8mtee7xgkq.streamlit.app/?embedded=true"
-      class="widget-iframe" 
-      title="Chatbot">
-    </iframe>
-  </div>
     <div class="wrapper">
+
+        <!-- Botón para abrir el widget con una imagen -->
+        <button class="open-btn" onclick="openWidget()">
+            <img src="img\1.png" alt="Abrir Widget">
+        </button>
+
+        <!-- Widget ventana emergente -->
+        <div id="popup-widget" class="popup-widget">
+            <!-- Botón para cerrar el widget -->
+            <button class="close-btn" onclick="closeWidget()">✖</button>
+
+            <!-- Contenido del widget: Incrustar la web -->
+            <iframe src="https://chatbot-kdxwd3p6hjwm8mtee7xgkq.streamlit.app/?embedded=true"
+            class="widget-iframe" 
+            title="Chatbot">
+            </iframe>
+        </div>
+    
         <!-- Inicio de la Barra Superior -->
         <div class="top-bar">
             <div class="container-fluid">
