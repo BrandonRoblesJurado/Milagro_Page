@@ -1,0 +1,1836 @@
+/*******************************/
+/********* CSS General *********/
+/*******************************/
+body {
+    color: #666666; /* Color del texto del cuerpo */
+    background: #ffffff; /* Color de fondo del cuerpo */
+    font-family: 'Roboto', sans-serif; /* Fuente del cuerpo */
+    font-weight: 400; /* Peso de la fuente */
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    font-family: 'EB Garamond', serif; /* Fuente para los encabezados */
+    font-weight: 600; /* Peso de la fuente */
+    font-style: italic; /* Estilo en cursiva */
+    color: #3e4d5d; /* Color del texto de los encabezados */
+}
+
+a {
+    color: #454545; /* Color de los enlaces */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #aa9166; /* Color de los enlaces al pasar el ratón, al hacer clic o al enfocarse */
+    outline: none; /* Sin contorno en el enfoque */
+    text-decoration: none; /* Sin subrayado en el enlace */
+}
+
+.btn:focus {
+    box-shadow: none; /* Sin sombra en el enfoque del botón */
+}
+
+.wrapper {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    max-width: 1366px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    background: #ffffff; /* Color de fondo del contenedor */
+}
+
+.back-to-top {
+    position: fixed; /* Posicionamiento fijo para el botón "volver arriba" */
+    display: none; /* Oculta el botón inicialmente */
+    background: #aa9166; /* Color de fondo del botón */
+    color: #121518; /* Color del texto del botón */
+    width: 44px; /* Ancho del botón */
+    height: 44px; /* Alto del botón */
+    text-align: center; /* Centra el texto en el botón */
+    line-height: 1; /* Altura de línea */
+    font-size: 22px; /* Tamaño de fuente del icono */
+    right: 15px; /* Posición a la derecha */
+    bottom: 15px; /* Posición en la parte inferior */
+    transition: background 0.5s; /* Transición suave para el fondo */
+    z-index: 9; /* Z-index para asegurar que esté en la parte superior */
+}
+
+.back-to-top:hover {
+    color: #aa9166; /* Color del texto al pasar el ratón */
+    background: #121518; /* Color de fondo al pasar el ratón */
+}
+
+.back-to-top i {
+    padding-top: 10px; /* Espaciado superior del icono */
+}
+
+
+/**********************************/
+/********** CSS de la Barra Superior **********/
+/**********************************/
+.top-bar {
+    position: relative; /* Posicionamiento relativo */
+    height: 90px; /* Altura de la barra superior */
+    background: #1774eeed; /* Color de fondo de la barra superior */
+}
+
+.top-bar .logo {
+    padding: 15px 0; /* Espaciado vertical de la logo */
+    text-align: left; /* Alineación a la izquierda */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.top-bar .logo h1 {
+    margin: 0; /* Sin margen */
+    color: #ffffff; /* Color del texto del logo */
+    
+    line-height: 55px; /* Altura de línea del logo */
+    font-weight: 800; /* Peso de la fuente del logo */
+}
+
+.top-bar .logo img {
+    max-width: 100%; /* Ancho máximo de la imagen */
+    max-height: 60px; /* Alto máximo de la imagen */
+}
+
+.top-bar .top-bar-right {
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: flex-end; /* Alinea a la derecha */
+}
+
+.top-bar .text {
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    flex-direction: column; /* Coloca los elementos en columna */
+    
+    padding: 0 20px; /* Espaciado horizontal */
+    text-align: center; /* Centra el texto */
+    border-left: 1 px solid rgba(255, 255, 255, .15); /* Borde izquierdo */
+}
+
+.top-bar .text h2 {
+    color: #ffffff; /* Color del texto */
+    font-family: 'Roboto', sans-serif; /* Fuente */
+    font-weight: 500; /* Peso de la fuente */
+    font-style: normal; /* Estilo normal */
+    font-size: 25px; /* Tamaño de la fuente */
+    margin: 0; /* Sin margen */
+}
+
+.top-bar .text p {
+    color: #ffffff; /* Color del texto */
+    font-size: 13px; /* Tamaño de la fuente */
+    margin: 0; /* Sin margen */
+}
+
+.top-bar .social {
+    display: flex; /* Utiliza flexbox para la alineación */
+    height: 90px; /* Altura de la sección de redes sociales */
+    font-size: 0; /* Tamaño de la fuente */
+    justify-content: flex-end; /* Alinea a la derecha */
+}
+
+.top-bar .social a {
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    width: 60px; /* Ancho de cada enlace */
+    height: 100%; /* Alto de cada enlace */
+    font-size: 22px; /* Tamaño de la fuente */
+    color: #ffffff; /* Color del texto */
+    border-right: 1px solid rgba(255, 255, 255, .15); /* Borde derecho */
+}
+
+.top-bar .social a:first-child {
+    border-left: 1px solid rgba(255, 255, 255, .15); /* Borde izquierdo en el primer enlace */
+}
+
+.top-bar .social a:hover {
+    color: #aa9166; /* Color del texto al pasar el ratón */
+    background: #ffffff; /* Color de fondo al pasar el ratón */
+}
+
+@media (min-width: 992px) {
+    .top-bar {
+        padding: 0 60px; /* Espaciado horizontal en pantallas grandes */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .top-bar .logo {
+        text-align: center; /* Alineación a la izquierda en pantallas pequeñas */
+    }
+    
+    .top-bar .social {
+        display: none; /* Oculta la sección de redes sociales en pantallas pequeñas */
+    }
+}
+
+
+/**********************************/
+/*********** CSS de la Barra de Navegación **********/
+/**********************************/
+.nav-bar {
+    position: relative; /* Posicionamiento relativo */
+    padding: 20px 0; /* Espaciado vertical */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.nav-bar.nav-sticky {
+    position: sticky; /* Posicionamiento fijo para la barra de navegación */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ancho de la barra de navegación */
+    padding: 10px 0; /* Espaciado vertical */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3); /* Sombra en la parte inferior */
+    z-index: 999; /* Z-index para asegurar que esté en la parte superior */
+}
+
+.nav-bar .navbar {
+    height: 100%; /* Alto de la barra de navegación */
+    padding: 0; /* Sin espaciado */
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    padding: 10px 10px 8px 10px; /* Espaciado del enlace */
+    color: #ffffff; /* Color del texto del enlace */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #180000; /* Color del texto del enlace al pasar el ratón */
+    transition: none; /* Sin transición */
+}
+
+.nav-bar .dropdown-menu {
+    margin-top: 0; /* Sin margen superior */
+    border: 0; /* Sin borde */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    background: #f8f9fa; /* Color de fondo del menú desplegable */
+}
+
+.nav-bar .btn {
+    color: #ffffff; /* Color del texto del botón */
+    border: 2px solid #aa9166; /* Borde del botón */
+    border-radius: 0; /* Sin esquinas redondeadas */
+}
+
+.nav-bar .btn:hover {
+    background: #aa9166; /* Color de fondo del botón al pasar el ratón */
+}
+
+@media (min-width: 992px) {
+    .nav-bar {
+        padding: 20px 60px; /* Espaciado horizontal en pantallas grandes */
+    }
+    
+    .nav-bar.nav-sticky {
+        padding: 10px 60px; /* Espaciado horizontal en pantallas grandes */
+    }
+    
+    .nav-bar,
+    .nav-bar .navbar {
+        background: #3198ff !important; /* Color de fondo de la barra de navegación */
+    }
+    
+    .nav-bar .navbar-brand {
+        display: none; /* Oculta la marca de la barra de navegación */
+    }
+    
+    .nav-bar a.nav-link {
+        padding: 8px 15px; /* Espaciado del enlace */
+        font-size: 15px; /* Tamaño de la fuente del enlace */
+        text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    }
+}
+
+@media (max-width: 991.98px) {   
+    .nav-bar,
+    .nav-bar .navbar {
+        padding: 3px 0; /* Espaciado vertical en pantallas pequeñas */
+        background: #608dbb !important; /* Color de fondo de la barra de navegación */
+    }
+    
+    .nav-bar a.nav-link {
+        padding: 5px; /* Espaciado del enlace */
+    }
+    
+    .nav-bar .dropdown-menu {
+        box-shadow: none; /* Sin sombra en el menú desplegable */
+    }
+    
+    /* .nav-bar .btn {
+        display: none; /* Oculta el botón en pantallas pequeñas 
+    } */
+}
+
+
+/*******************************/
+/******** CSS del Carrusel *********/
+/*******************************/
+.carousel {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del carrusel */
+    height: calc(100vh - 170px); /* Alto del carrusel */
+    margin: 0 auto; /* Centra el carrusel */
+    text-align: center; /* Centra el texto */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.carousel .carousel-inner,
+.carousel .carousel-item {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del carrusel */
+    height: 100%; /* Alto del carrusel */
+}
+
+.carousel .carousel-item img {
+    width: 100%; /* Ancho de la imagen */
+    height: 100%; /* Alto de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+.carousel .carousel-item::after {
+    position: absolute; /* Posicionamiento absoluto */
+    content: ""; /* Contenido vacío */
+    width: 100%; /* Ancho del contenedor */
+    height: 100%; /* Alto del contenedor */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición a la izquierda */
+    background: rgba(0, 0, 0, .3); /* Color de fondo con opacidad */
+    z-index: 1; /* Z-index para asegurar que esté en la parte superior */
+}
+
+.carousel .carousel-caption {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Posición en la parte superior */
+    bottom: 0; /* Posición en la parte inferior */
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    flex-direction: column; /* Coloca los elementos en columna */
+    height: calc(100vh - 170px); /* Alto del contenedor */
+}
+
+.carousel .carousel-caption h1 {
+    color: #ffffff; /* Color del texto */
+    font-size: 60px; /* Tamaño de la fuente */
+    font-weight: 700; /* Peso de la fuente */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.carousel .carousel-caption p {
+    color: #ffffff; /* Color del texto */
+    font-size: 25px; /* Tamaño de la fuente */
+    margin-bottom: 25px; /* Espaciado inferior */
+}
+
+.carousel .carousel-caption .btn {
+    padding: 15px 35px; /* Espaciado del botón */
+    font-size: 18px; /* Tamaño de la fuente del botón */
+    font-weight: 500; /* Peso de la fuente del botón */
+    letter-spacing:  1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    color: #aa9166; /* Color del texto del botón */
+    background: #121518; /* Color de fondo del botón */
+    border: 2px solid #aa9166; /* Borde del botón */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.carousel .carousel-caption .btn:hover {
+    color: #121518; /* Color del texto del botón al pasar el ratón */
+    background: #aa9166; /* Color de fondo del botón al pasar el ratón */
+}
+
+@media (max-width: 767.98px) {
+    .carousel .carousel-caption h1 {
+        font-size: 40px; /* Tamaño de la fuente en pantallas pequeñas */
+        font-weight: 700; /* Peso de la fuente en pantallas pequeñas */
+    }
+    
+    .carousel .carousel-caption p {
+        font-size: 20px; /* Tamaño de la fuente en pantallas pequeñas */
+    }
+    
+    .carousel .carousel-caption .btn {
+        padding: 12px 30px; /* Espaciado del botón en pantallas pequeñas */
+        font-size: 18px; /* Tamaño de la fuente del botón en pantallas pequeñas */
+        font-weight: 500; /* Peso de la fuente del botón en pantallas pequeñas */
+        letter-spacing: 0; /* Sin espaciado entre letras en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel .carousel-caption h1 {
+        font-size: 30px; /* Tamaño de la fuente en pantallas muy pequeñas */
+        font-weight: 500; /* Peso de la fuente en pantallas muy pequeñas */
+    }
+    
+    .carousel .carousel-caption p {
+        font-size: 16px; /* Tamaño de la fuente en pantallas muy pequeñas */
+    }
+    
+    .carousel .carousel-caption .btn {
+        padding: 10px 25px; /* Espaciado del botón en pantallas muy pequeñas */
+        font-size: 16px; /* Tamaño de la fuente del botón en pantallas muy pequeñas */
+        font-weight: 400; /* Peso de la fuente del botón en pantallas muy pequeñas */
+        letter-spacing: 0; /* Sin espaciado entre letras en pantallas muy pequeñas */
+    }
+}
+
+.carousel .animated {
+    -webkit-animation-duration: 1.5s; /* Duración de la animación en Safari */
+    animation-duration: 1.5s; /* Duración de la animación */
+}
+
+
+/*******************************/
+/******* CSS de la Cabecera de la Página *******/
+/*******************************/
+.page-header {
+    position: relative; /* Posicionamiento relativo */
+    margin-bottom: 45px; /* Espaciado inferior */
+    padding: 90px 0; /* Espaciado vertical */
+    text-align: center; /* Centra el texto */
+    background: #aa9166; /* Color de fondo */
+}
+
+.page-header h2 {
+    position: relative; /* Posicionamiento relativo */
+    color: #121518; /* Color del texto */
+    font-size: 60px; /* Tamaño de la fuente */
+    font-weight: 700; /* Peso de la fuente */
+    margin-bottom: 20px; /* Espaciado inferior */
+    padding-bottom: 5px; /* Espaciado inferior */
+}
+
+.page-header h2::after {
+    position: absolute; /* Posicionamiento absoluto */
+    content: ""; /* Contenido vacío */
+    width: 100px; /* Ancho del contenedor */
+    height: 2px; /* Alto del contenedor */
+    left: calc(50% - 50px); /* Posición a la izquierda */
+    bottom: 0; /* Posición en la parte inferior */
+    background: #121518; /* Color de fondo */
+}
+
+.page-header a {
+    position: relative; /* Posicionamiento relativo */
+    padding: 0 12px; /* Espaciado horizontal */
+    font-size: 22px; /* Tamaño de la fuente */
+    color: #121518; /* Color del texto */
+}
+
+.page-header a:hover {
+    color: #ffffff; /* Color del texto al pasar el ratón */
+}
+
+.page-header a::after {
+    position: absolute; /* Posicionamiento absoluto */
+    content: "/"; /* Contenido */
+    width: 8px; /* Ancho del contenedor */
+    height: 8px; /* Alto del contenedor */
+    top: -2px; /* Posición en la parte superior */
+    right: -7px; /* Posición a la derecha */
+    text-align: center; /* Centra el texto */
+    color: #121518; /* Color del texto */
+}
+
+.page-header a:last-child::after {
+    display: none; /* Oculta el contenido en el último enlace */
+}
+
+@media (max-width: 767.98px) {
+    .page-header h2 {
+        font-size: 35px; /* Tamaño de la fuente en pantallas pequeñas */
+    }
+    
+    .page-header a {
+        font-size: 18px; /* Tamaño de la fuente en pantallas pequeñas */
+    }
+}
+
+
+/*******************************/
+/******* CSS del Encabezado de la Sección ********/
+/*******************************/
+.section-header {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 45px; /* Espaciado inferior */
+}
+
+.section-header h2 {
+    margin: 0; /* Sin margen */
+    position: relative; /* Posicionamiento relativo */
+    font-size: 50px; /* Tamaño de la fuente */
+    font-weight: 700; /* Peso de la fuente */
+    white-space: nowrap; /* Sin saltos de línea */
+    z-index: 1; /* Z-index para asegurar que esté en la parte superior */
+}
+
+.section-header h2::before {
+    position: absolute; /* Posicionamiento absoluto */
+    content: ""; /* Contenido vacío */
+    width: 100%; /* Ancho del contenedor */
+    height: 7px; /* Alto del contenedor */
+    left: 0; /* Posición a la izquierda */
+    top: 21px; /* Posición en la parte superior */
+    background: transparent; /* Color de fondo transparente */
+    border-top: 1px solid #aa9166; /* Borde superior */
+    border-bottom: 1px solid #aa9166; /* Borde inferior */
+    z-index: -1; /* Z-index para asegurar que esté detrás */
+}
+
+.section-header h2::after {
+    position: absolute; /* Posicionamiento absoluto */
+    content: ""; /* Contenido vacío */
+    width: 100%; /* Ancho del contenedor */
+    height: 7px; /* Alto del contenedor */
+    left: 0; /* Posición a la izquierda */
+    bottom: 20px; /* Posición en la parte inferior */
+    background: transparent; /* Color de fondo transparente */
+    border-top: 1px solid #aa9166; /* Borde superior */
+    border-bottom: 1px solid #aa9166; /* Borde inferior */
+    z-index: -1; /* Z-index para asegurar que esté detrás */
+}
+
+@media (max-width: 767.98px) {
+    .section-header h2 {
+        font-size: 30px; /* Tamaño de la fuente en pantallas pequeñas */
+    }
+}
+
+/*******************************/
+/******** CSS de la Característica Superior ********/
+/*******************************/
+.feature-top {
+    position: relative; /* Posicionamiento relativo */
+    background: #121518; /* Color de fondo */
+    margin-bottom: 45px; /* Espaciado inferior */
+}
+
+.feature-top .col-md-3 {
+    border-right: 1px solid rgba(255, 255, 255, .1); /* Borde derecho */
+    border-bottom: 1px solid rgba(255, 255, 255, .1); /* Borde inferior */
+}
+
+@media (max-width: 575.98px) {
+    .feature-top .col-md-3:nth-child(1n) {
+        border-right: none; /* Sin borde derecho en pantallas muy pequeñas */
+    }
+    
+    .feature-top .col-md-3:last-child {
+        border-bottom: none; /* Sin borde inferior en pantallas muy pequeñas */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .feature-top .col-md-3:nth-child(2n) {
+        border-right: none; /* Sin borde derecho en pantallas pequeñas */
+    }
+    
+    .feature-top .col-md-3:nth-child(3n),
+    .feature-top .col-md-3:nth-child(4n) {
+        border-bottom: none; /* Sin borde inferior en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 768px) {
+    .feature-top .col-md-3 {
+        border-bottom: none; /* Sin borde inferior en pantallas grandes */
+    }
+    
+    .feature-top .col-md-3 :nth-child(4n) {
+        border-right: none; /* Sin borde derecho en pantallas grandes */
+    }
+}
+
+.feature-top .feature-item {
+    padding: 30px 0; /* Espaciado vertical */
+    text-align: center; /* Centra el texto */
+}
+
+.feature-top .feature-item i {
+    color: #aa9166; /* Color del icono */
+    font-size: 35px; /* Tamaño de la fuente del icono */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.feature-top .feature-item h3 {
+    color: #ffffff; /* Color del texto */
+    font-size: 30px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+}
+
+.feature-top .feature-item p {
+    color: #999999; /* Color del texto */
+    margin: 0; /* Sin margen */
+    font-size: 18px; /* Tamaño de la fuente */
+}
+
+
+/*******************************/
+/******** CSS de Acerca de ********/
+/*******************************/
+.about {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    padding: 45px 0; /* Espaciado vertical */
+}
+
+.about .section-header {
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.about .about-img {
+    position: relative; /* Posicionamiento relativo */
+    height: 100%; /* Alto del contenedor */
+    padding: 10px; /* Espaciado */
+    background: #121518; /* Color de fondo */
+}
+
+.about .about-img img {
+    width: 100%; /* Ancho de la imagen */
+    height: 100%; /* Alto de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+.about .about-text p {
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.about .about-text a.btn {
+    position: relative; /* Posicionamiento relativo */
+    margin-top: 15px; /* Espaciado superior */
+    padding: 15px 35px; /* Espaciado del botón */
+    font-size: 16px; /* Tamaño de la fuente del botón */
+    font-weight: 500; /* Peso de la fuente del botón */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    color: #aa9166; /* Color del texto del botón */
+    border: 2px solid #aa9166; /* Borde del botón */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    background: #121518; /* Color de fondo del botón */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.about .about-text a.btn:hover {
+    color: #121518; /* Color del texto del botón al pasar el ratón */
+    background: #aa9166; /* Color de fondo del botón al pasar el ratón */
+}
+
+@media (max-width: 767.98px) {
+    .about .about-img {
+        margin-bottom: 30px; /* Espaciado inferior en pantallas pequeñas */
+        height: auto; /* Alto automático en pantallas pequeñas */
+    }
+}
+
+
+/*******************************/
+/******** CSS de Servicio ********/
+/*******************************/
+.service {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    padding: 45px 0 15px 0; /* Espaciado vertical */
+}
+
+.service .service-item {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    text-align: center; /* Centra el texto */
+    background: #121518; /* Color de fondo */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.service .service-icon {
+    height: 200px; /* Alto del contenedor */
+    position: relative; /* Posicionamiento relativo */
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    background: #000000; /* Color de fondo */
+}
+
+.service .service-icon i {
+    width: 100px; /* Ancho del icono */
+    height: 100px; /* Alto del icono */
+    padding: 20px 0; /* Espaciado vertical */
+    text-align: center; /* Centra el texto */
+    font-size: 60px; /* Tamaño de la fuente del icono */
+    color : #aa9166; /* Color del icono */
+    background: #121518; /* Color de fondo del icono */
+    transition: .5s; /* Transición suave para cambios de estilo */
+}
+
+.service .service-item:hover .service-icon i {
+    margin-top: -15px; /* Espaciado superior al pasar el ratón */
+}
+
+.service .service-item h3 {
+    margin: 0; /* Sin margen */
+    padding: 25px 15px 15px 15px; /* Espaciado */
+    font-size: 30px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    color: #aa9166; /* Color del texto */
+}
+
+.service .service-item p {
+    margin: 0; /* Sin margen */
+    color: #999999; /* Color del texto */
+    padding: 0 25px 25px 25px; /* Espaciado */
+    font-size: 18px; /* Tamaño de la fuente */
+}
+
+.service .service-item a.btn {
+    position: relative; /* Posicionamiento relativo */
+    margin-bottom: 30px; /* Espaciado inferior */
+    padding: 10px 20px; /* Espaciado del botón */
+    font-size: 14px; /* Tamaño de la fuente del botón */
+    font-weight: 500; /* Peso de la fuente del botón */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    color: #aa9166; /* Color del texto del botón */
+    border: 2px solid #aa9166; /* Borde del botón */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    background: #121518; /* Color de fondo del botón */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.service .service-item:hover a.btn {
+    color: #121518; /* Color del texto del botón al pasar el ratón */
+    background: #aa9166; /* Color de fondo del botón al pasar el ratón */
+}
+
+
+/*******************************/
+/******** CSS de Característica ********/
+/*******************************/
+.feature {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    padding: 45px 0; /* Espaciado vertical */
+}
+
+.feature .feature-item {
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.feature .feature-icon {
+    height: 180px; /* Alto del contenedor */
+    position: relative; /* Posicionamiento relativo */
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    background: #121518; /* Color de fondo */
+}
+
+.feature .feature-icon i {
+    width: 100px; /* Ancho del icono */
+    height: 100px; /* Alto del icono */
+    padding: 20px 0; /* Espaciado vertical */
+    text-align: center; /* Centra el texto */
+    font-size: 60px; /* Tamaño de la fuente del icono */
+    color: #aa9166; /* Color del icono */
+    background: #000000; /* Color de fondo del icono */
+    transition: .5s; /* Transición suave para cambios de estilo */
+}
+
+.feature .feature-item:hover .feature-icon i {
+    margin-right: -15px; /* Espaciado derecho al pasar el ratón */
+}
+
+.feature .feature-item h3 {
+    position: relative; /* Posicionamiento relativo */
+    margin-bottom: 15px; /* Espaciado inferior */
+    padding-bottom: 10px; /* Espaciado inferior */
+    font-size: 30px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+}
+
+.feature .feature-item h3::after {
+    position: absolute; /* Posicionamiento absoluto */
+    content: ""; /* Contenido vacío */
+    width: 50px; /* Ancho del contenedor */
+    height: 2px; /* Alto del contenedor */
+    left: 0; /* Posición a la izquierda */
+    bottom: 0; /* Posición en la parte inferior */
+    background: #aa9166; /* Color de fondo */
+}
+
+.feature .feature-item p {
+    margin: 0; /* Sin margen */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.feature .feature-img {
+    position: relative; /* Pos icionamiento relativo */
+    height: 100%; /* Alto del contenedor */
+    padding: 10px; /* Espaciado */
+    background: #121518; /* Color de fondo */
+}
+
+.feature .feature-img img {
+    width: 100%; /* Ancho de la imagen */
+    height: 100%; /* Alto de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+
+/*******************************/
+/******** CSS del Equipo ********/
+/*******************************/
+.team {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    padding: 45px 0 15px 0; /* Espaciado vertical */
+}
+
+.team .team-item {
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.team .team-img {
+    position: relative; /* Posicionamiento relativo */
+}
+
+.team .team-img img {
+    width: 100%; /* Ancho de la imagen */
+}
+
+.team .team-text {
+    position: relative; /* Posicionamiento relativo */
+    padding: 50px 15px 30px 15px; /* Espaciado */
+    text-align: center; /* Centra el texto */
+    background: #121518; /* Color de fondo */
+}
+
+.team .team-text h2 {
+    font-size: 22px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    color: #aa9166; /* Color del texto */
+}
+
+.team .team-text p {
+    margin: 0; /* Sin margen */
+    color: #999999; /* Color del texto */
+}
+
+.team .team-social {
+    position: absolute; /* Posicionamiento absoluto */
+    width: calc(100% - 60px); /* Ancho del contenedor */
+    height: 50px; /* Alto del contenedor */
+    top: -25px; /* Posición en la parte superior */
+    left: 30px; /* Posición a la izquierda */
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    background: #aa9166; /* Color de fondo */
+    font-size: 0; /* Tamaño de la fuente */
+    transition: .5s; /* Transición suave para cambios de estilo */
+}
+
+.team .team-item:hover .team-social {
+    width: 100%; /* Ancho del contenedor al pasar el ratón */
+    left: 0; /* Posición a la izquierda al pasar el ratón */
+}
+
+.team .team-social a {
+    display: inline-block; /* Muestra el enlace en línea */
+    margin-right: 15px; /* Espaciado derecho */
+    font-size: 18px; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto */
+    color: #121518; /* Color del texto */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.team .team-social a:last-child {
+    margin-right: 0; /* Sin espaciado derecho en el último enlace */
+}
+
+.team .team-social a:hover {
+    color: #ffffff; /* Color del texto al pasar el ratón */
+}
+
+
+/*******************************/
+/******** CSS de Preguntas Frecuentes ********/
+/*******************************/
+.faqs {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    padding: 45px 0; /* Espaciado vertical */
+}
+
+.faqs .faqs-img {
+    position: relative; /* Posicionamiento relativo */
+    height: 100%; /* Alto del contenedor */
+    padding: 10px; /* Espaciado */
+    background: #121518; /* Color de fondo */
+}
+
+.faqs .faqs-img img {
+    width: 100%; /* Ancho de la imagen */
+    height: 100%; /* Alto de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+@media(max-width: 767.98px) {
+    .faqs .faqs-img {
+        margin-bottom: 30px; /* Espaciado inferior en pantallas pequeñas */
+        height: auto; /* Alto automático en pantallas pequeñas */
+    }
+}
+
+.faqs .card {
+    margin-bottom: 15px; /* Espaciado inferior */
+    padding-top: 15px; /* Espaciado superior */
+    border: none; /* Sin borde */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    border-top: 1px solid #aa9166; /* Borde superior */
+}
+
+.faqs .card :last-child {
+    margin-bottom: 0; /* Sin espaciado inferior en la última tarjeta */
+    padding-bottom: 15px; /* Espaciado inferior en la última tarjeta */
+    border-bottom: 1px solid #aa9166; /* Borde inferior en la última tarjeta */
+}
+
+.faqs .card-header {
+    padding: 0; /* Sin espaciado */
+    border: none; /* Sin borde */
+    background: #ffffff; /* Color de fondo */
+}
+
+.faqs .card-header a {
+    display: block; /* Muestra el enlace en bloque */
+    width: 100%; /* Ancho del enlace */
+    color: #121518; /* Color del texto */
+    font-size: 18px; /* Tamaño de la fuente */
+    line-height: 40px; /* Altura de línea */
+}
+
+.faqs .card-header a span {
+    display: inline-block; /* Muestra el span en línea */
+    width: 40px; /* Ancho del span */
+    height: 40px; /* Alto del span */
+    margin-right: 10px; /* Espaciado derecho */
+    text-align: center; /* Centra el texto */
+    background: #121518; /* Color de fondo */
+    color: #aa9166; /* Color del texto */
+    font-weight: 700; /* Peso de la fuente */
+}
+
+.faqs .card-header [data-toggle="collapse"]:after {
+    font-family: 'font Awesome 5 Free'; /* Fuente */
+    content: "\f067"; /* Contenido */
+    float: right; /* Flota a la derecha */
+    color: #121518; /* Color del texto */
+    font-size: 12px; /* Tamaño de la fuente */
+    font-weight: 900; /* Peso de la fuente */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.faqs .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
+    font-family: 'font Awesome 5 Free'; /* Fuente */
+    content: "\f068"; /* Contenido */
+    float: right; /* Flota a la derecha */
+    color: #121518; /* Color del texto */
+    font-size: 12px; /* Tamaño de la fuente */
+    font-weight: 900; /* Peso de la fuente */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.faqs .card-body {
+    padding: 15px 0 0 0; /* Espaciado */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: none; /* Sin borde */
+    background: #ffffff; /* Color de fondo */
+}
+
+.faqs a.btn {
+    position: relative; /* Posicionamiento relativo */
+    margin-top: 15px; /* Espaciado superior */
+    padding: 15px 35px; /* Espaciado del botón */
+    font-size: 16px; /* Tamaño de la fuente del botón */
+    font-weight: 500; /* Peso de la fuente del botón */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    color: #aa9166; /* Color del texto del botón */
+    border: 2px solid #aa9166; /* Borde del botón */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    background: #121518; /* Color de fondo del botón */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.faqs a.btn:hover {
+    color: #121518; /* Color del texto del botón al pasar el ratón */
+    background: #aa9166; /* Color de fondo del botón al pasar el ratón */
+}
+
+
+/*******************************/
+/******** CSS de Testimonios ********/
+/*******************************/
+.testimonial {
+    position: relative; /* Posicionamiento relativo */
+    padding: 45px 0; /* Espaciado vertical */
+}
+
+.testimonial .testimonials-carousel {
+    position: relative; /* Posicionamiento relativo */
+    width: calc(100% + 30px); /* Ancho del carrusel */
+    left: -15px; /* Posición a la izquierda */
+    right: -15px; /* Posición a la derecha */
+}
+
+.testimonial .testimonial-item {
+    position: relative; /* Posicionamiento relativo */
+    margin: 0 15px; /* Espaciado horizontal */
+    padding: 30px; /* Espaciado */
+    background: #121518; /* Color de fondo */
+    overflow: hidden; /* Oculta el desbordamiento */
+ }
+
+.testimonial .testimonial-item i {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Posición en la parte superior */
+    right: 0; /* Posición a la derecha */
+    color: #333333; /* Color del icono */
+    font-size: 60px; /* Tamaño de la fuente del icono */
+    transform: rotate(45deg); /* Rotación del icono */
+    z-index: 1; /* Z-index para asegurar que esté en la parte superior */
+}
+
+.testimonial .testimonial-item .col-12 {
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.testimonial .testimonial-item img {
+    width: 100%; /* Ancho de la imagen */
+}
+
+.testimonial .testimonial-item h2 {
+    color: #aa9166; /* Color del texto */
+    font-size: 22px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    margin-bottom: 5px; /* Espaciado inferior */
+}
+
+.testimonial .testimonial-item p {
+    color: #999999; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 0; /* Sin margen */
+}
+
+.testimonial .owl-nav,
+.testimonial .owl-dots {
+    margin-top: 15px; /* Espaciado superior */
+    text-align: center; /* Centra el texto */
+}
+
+.testimonial .owl-dot {
+    display: inline-block; /* Muestra el punto en línea */
+    margin: 0 5px; /* Espaciado horizontal */
+    width: 12px; /* Ancho del punto */
+    height: 12px; /* Alto del punto */
+    border-radius: 50%; /* Esquinas redondeadas */
+    background: #aa9166; /* Color de fondo */
+}
+
+.testimonial .owl-dot.active {
+    background: #121518; /* Color de fondo activo */
+}
+
+
+/*******************************/
+/******** CSS de Blog ********/
+/*******************************/
+.blog {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    padding: 45px 0; /* Espaciado vertical */
+}
+
+.blog .blog-carousel {
+    position: relative; /* Posicionamiento relativo */
+    width: calc(100% + 30px); /* Ancho del carrusel */
+    left: -15px; /* Posición a la izquierda */
+    right: -15px; /* Posición a la derecha */
+}
+
+.blog .blog-item {
+    position: relative; /* Posicionamiento relativo */
+    margin: 0 15px; /* Espaciado horizontal */
+    background: #ffffff; /* Color de fondo */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.blog .blog-page .blog-item {
+    margin: 0 0 30px 0; /* Espaciado inferior */
+}
+
+.blog .blog-item img {
+    width: 100%; /* Ancho de la imagen */
+    margin-bottom: 25px; /* Espaciado inferior */
+}
+
+.blog .blog-item h3 {
+    font-size: 25px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+}
+
+.blog .blog-item .meta {
+    padding: 0 0 15px 0; /* Espaciado */
+}
+
+.blog .blog-item .meta * {
+    display: inline-block; /* Muestra el elemento en línea */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin espaciado */
+    font-size: 14px; /* Tamaño de la fuente */
+    color: #999999; /* Color del texto */
+}
+
+.blog .blog-item .meta i {
+    margin: 0 2px 0 10px; /* Espaciado */
+}
+
+.blog .blog-item .meta i:first-child {
+    margin-left: 0; /* Sin espaciado izquierdo en el primer icono */
+}
+
+.blog .blog-item p {
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.blog .blog-item a.btn {
+    padding: 0; /* Sin espaciado */
+    font-size: 14px; /* Tamaño de la fuente del botón */
+    font-weight: 500; /* Peso de la fuente del botón */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    color: #aa9166; /* Color del texto del botón */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.blog .blog-item a.btn i {
+    margin-left: 10px; /* Espaciado izquierdo */
+}
+
+.blog .blog-item a.btn:hover {
+    color: #121518; /* Color del texto del botón al pasar el ratón */
+}
+
+.blog .owl-nav,
+.blog .owl-dots {
+    margin-top: 15px; /* Espaciado superior */
+    text-align: center; /* Centra el texto */
+}
+
+.blog .owl-dot {
+    display: inline-block; /* Muestra el punto en línea */
+    margin: 0 5px; /* Espaciado horizontal */
+    width: 12px; /* Ancho del punto */
+    height: 12px; /* Alto del punto */
+    border-radius: 50%; /* Esquinas redondeadas */
+    background: #aa9166; /* Color de fondo */
+}
+
+.blog .owl-dot.active {
+    background: #121518; /* Color de fondo activo */
+}
+
+.blog .pagination .page-link {
+    color: #121518; /* Color del texto */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    border-color: #aa9166; /* Color del borde */
+}
+
+.blog .pagination .page-link:hover,
+.blog .pagination .page-item.active .page-link {
+    color: #121518; /* Color del texto al pasar el ratón */
+    background: #aa9166; /* Color de fondo al pasar el ratón */
+}
+
+.blog .pagination .disabled .page-link {
+    color: #999999; /* Color del texto deshabilitado */
+}
+
+
+/*******************************/
+/******** CSS de Línea de Tiempo ********/
+/*******************************/
+.timeline {
+    position: relative; /* Posicionamiento relativo */
+    padding: 45px 0; /* Espaciado vertical */
+}
+
+.timeline .timeline-start {
+    position: relative; /* Posicionamiento relativo */
+    width: calc(100% + 30px); /* Ancho del contenedor */
+    left: -15px; /* Posición a la izquierda */
+    right: -15px; /* Posición a la derecha */
+}
+
+.timeline .timeline-container {
+    padding: 0 15px; /* Espaciado */
+    position: relative; /* Posicionamiento relativo */
+    background: inherit; /* Color de fondo */
+    width: 50%; /* Ancho del contenedor */
+    margin-top: -5px; /* Espaciado superior */
+}
+
+.timeline .timeline-container.left {
+    left: 0; /* Posición a la izquierda */
+}
+
+.timeline .timeline-container.right {
+    left: 50%; /* Posición a la derecha */
+}
+
+.timeline .timeline-container::before {
+    content: ''; /* Contenido vacío */
+    position: absolute; /* Posicionamiento absoluto */
+    width: 15px; /* Ancho del contenedor */
+    height: 5px; /* Alto del contenedor */
+    background: #aa9166; /* Color de fondo */
+    z-index: 1; /* Z-index para asegurar que esté en la parte superior */
+}
+
+.timeline .timeline-container.left::before {
+    top: 0; /* Posición en la parte superior */
+    right: 0; /* Posición a la derecha */
+}
+
+.timeline .timeline-container.right::before {
+    bottom: 0; /* Posición en la parte inferior */
+    left: 0; /* Posición a la izquierda */
+}
+
+.timeline .timeline-container::after {
+    content: ''; /* Contenido vacío */
+    position: absolute; /* Posicionamiento absoluto */
+    width: 15px; /* Ancho del contenedor */
+    height: 5px; /* Alto del contenedor */
+    background: #aa9166; /* Color de fondo */
+    z-index: 1; /* Z-index para asegurar que esté en la parte superior */
+}
+
+.timeline .timeline-container.left::after {
+    bottom: 0; /* Posición en la parte inferior */
+    right: 0; /* Posición a la derecha */
+}
+
+.timeline .timeline-container.right::after {
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición a la izquierda */
+}
+
+.timeline .timeline-container:first-child::before,
+.timeline .timeline-container:last-child::before {
+    display: none; /* Oculta el contenido en el primer y último contenedor */
+}
+
+.timeline .timeline-container .timeline-content {
+    padding: 30px; /* Espaciado */
+    background: #121518; /* Color de fondo */
+    position: relative; /* Posicionamiento relativo */
+    border-right: 5px solid #aa9166; /* Borde derecho */
+}
+
+.timeline .timeline-container.right .timeline-content {
+    border-left: 5px solid #aa9166; /* Borde izquierdo */
+}
+
+.timeline .timeline-container .timeline-content h2 {
+    margin-bottom: 15px; /* Espaciado inferior */
+    font-size: 22px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    color: #aa9166; /* Color del texto */
+}
+
+.timeline .timeline-container .timeline-content h2 span {
+    display: inline-block; /* Muestra el span en línea */
+    margin-right: 15px; /* Espaciado derecho */
+    padding: 5px 10px; /* Espaciado */
+    color: #121518; /* Color del texto */
+    background: #aa9166; /* Color de fondo */
+    font-family: 'Roboto', sans-serif; /* Fuente */
+    font-style: normal; /* Estilo normal */
+}
+
+.timeline .timeline-container .timeline-content p {
+    margin: 0; /* Sin margen */
+    font-size: 16px; /* Tamaño de la fuente */
+    color: #999999; /* Color del texto */
+}
+
+@media (max-width: 767.98px) {
+    .timeline .timeline-container {
+        width: 100%; /* Ancho del contenedor en pantallas pequeñas */
+        margin-top: 0; /* Sin espaciado superior en pantallas pequeñas */
+        padding-left: 15px; /* Espaciado izquierdo en pantallas pequeñas */
+        padding-right: 15px; /* Espaciado derecho en pantallas pequeñas */
+        padding-bottom: 30px; /* Espaciado inferior en pantallas pequeñas */
+    }
+    
+    .timeline .timeline-container:last-child {
+        padding-bottom: 0; /* Sin espaciado inferior en el último contenedor */
+    }
+    
+    .timeline .timeline-container.right {
+        left: 0%; /* Posición a la izquierda en pantallas pequeñas */
+    }
+
+    .timeline .timeline-container.left::after, 
+    .timeline .timeline-container.right::after,
+    .timeline .timeline-container.left::before,
+    .timeline .timeline-container.right::before {
+        width: 5px; /* Ancho del contenedor en pantallas pequeñas */
+        height: 35px; /* Alto del contenedor en pantallas pequeñas */
+        left: 15px; /* Posición a la izquierda en pantallas pequeñas */
+    }
+    
+    .timeline .timeline-container.left .timeline-content,
+    .timeline .timeline-container.right .timeline-content {
+        border-left: 5px solid #aa9166; /* Borde izquierdo en pantallas pequeñas */
+        border-right: none; /* Sin borde derecho en pantallas pequeñas */
+    }
+}
+
+
+/*******************************/
+/******** CSS de Portafolio ********/
+/*******************************/
+.portfolio {
+    position: relative; /* Posicionamiento relativo */
+    padding: 45px 0; /* Espaciado vertical */
+    background: #ffffff; /* Color de fondo */
+}
+
+.portfolio #portfolio-flters {
+    padding: 0; /* Sin espaciado */
+    margin: -15px 0 25px 0; /* Espaciado */
+    list-style: none; /* Sin estilo de lista */
+    font-size: 0; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto */
+}
+
+.portfolio #portfolio-flters li,
+.portfolio .load-more .btn {
+    cursor: pointer; /* Cursor de puntero */
+    display: inline-block; /* Muestra el elemento en línea */
+    margin: 5px; /* Espaciado */
+    padding: 8px 15px; /* Espaciado */
+    color: #aa9166; /* Color del texto */
+    font-size: 14px; /* Tamaño de la fuente */
+    font-weight: 500; /* Peso de la fuente */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    background: #121518; /* Color de fondo */
+    border: 2px solid #aa9166; /* Borde */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    background: #aa9166; /* Color de fondo al pasar el ratón */
+    color: #121518; /* Color del texto al pasar el ratón */
+}
+
+.portfolio .load-more {
+    text-align: center; /* Centra el texto */
+}
+
+.portfolio .load-more .btn {
+    padding: 15px 35px; /* Espaciado del botón */
+    font-size: 16px; /* Tamaño de la fuente del botón */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.portfolio .load-more .btn:hover {
+    color: #121518; /* Color del texto del botón al pasar el ratón */
+    background: #aa9166; /* Color de fondo del botón al pasar el ratón */
+}
+
+.portfolio .portfolio-item {
+    position: relative; /* Posicionamiento relativo */
+    margin-bottom: 30px; /* Espaciado inferior */
+    overflow: hidden; /* Oculta el desbordamiento */
+    transition: .5s; /* Transición suave para cambios de estilo */
+}
+
+.portfolio .portfolio-item:hover {
+    margin-top: -10px; /* Espaciado superior al pasar el ratón */
+}
+
+.portfolio .portfolio-wrap {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+}
+
+.portfolio img {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho de la imagen */
+    height: 100%; /* Alto de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+.portfolio figure {
+    position: absolute; /* Posicionamiento absoluto */
+    padding: 30px; /* Espaciado */
+    width: 100%; /* Ancho del contenedor */
+    height: 100%; /* Alto del contenedor */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición a la izquierda */
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: flex-start; /* Alinea verticalmente los elementos */
+    justify-content: flex-end; /* Alinea a la derecha */
+    flex-direction: column; /* Coloca los elementos en columna */
+    background: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .0), rgba(0, 0, 0, 1) 90%); /* Color de fondo con degradado */
+}
+
+.portfolio figure p {
+    position: relative; /* Posicionamiento relativo */
+    margin-bottom: 5px; /* Espaciado inferior */
+    padding-bottom: 5px; /* Espaciado inferior */
+    color: #ffffff; /* Color del texto */
+    font-size: 18px; /* Tamaño de la fuente */
+}
+
+.portfolio figure p::after {
+    position: absolute; /* Posicionamiento absoluto */
+    content: ""; /* Contenido vacío */
+    width: 50px; /* Ancho del contenedor */
+    height: 2px; /* Alto del contenedor */
+    left: 0; /* Posición a la izquierda */
+    bottom: 0; /* Posición en la parte inferior */
+    background: #ffffff; /* Color de fondo */
+}
+
+.portfolio figure a {
+    font-family: 'EB Garamond', serif; /* Fuente */
+    color: #aa9166; /* Color del texto */
+    font-size: 25px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    font-style: italic; /* Estilo en cursiva */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.portfolio figure a:hover {
+    text-decoration: none; /* Sin subrayado */
+    color: #ffffff; /* Color del texto al pasar el ratón */
+}
+
+.portfolio figure span {
+    position: relative; /* Posicionamiento relativo */
+    color: #999999; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+
+/*******************************/
+/******** CSS de Contacto ********/
+/*******************************/
+.contact {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    padding: 45px 0 15px 0; /* Espaciado vertical */
+}
+
+.contact .contact-info {
+    position: relative; /* Posicionamiento relativo */
+    margin-bottom: 30px; /* Espaciado inferior */
+    width: 100%; /* Ancho del contenedor */
+    padding: 30px; /* Espaciado */
+    background: #121518; /* Color de fondo */
+}
+
+.contact .contact-item {
+    position: relative; /* Posicionamiento relativo */
+    margin-bottom: 30px; /* Espaciado inferior */
+    padding: 30px; /* Espaciado */
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: flex-start; /* Alinea verticalmente los elementos */
+    flex-direction: row; /* Coloca los elementos en fila */
+    border: 2px solid #aa9166; /* Borde */
+}
+
+.contact .contact-item i {
+    display: inline-block; /* Muestra el icono en línea */
+    width: 60px; /* Ancho del icono */
+    height: 60px; /* Alto del icono */
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    font-size: 30px; /* Tamaño de la fuente del icono */
+    color: #aa9166; /* Color del icono */
+    border: 2px solid #aa9166; /* Borde */
+}
+
+.contact .contact-text {
+    position: relative; /* Posicionamiento relativo */
+    width: auto; /* Ancho automático */
+    padding-left: 15px; /* Espaciado izquierdo */
+}
+
+.contact .contact-text h2 {
+    color: #aa9166; /* Color del texto */
+    font-size: 25px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+}
+
+.contact .contact-text p {
+    margin: 0; /* Sin margen */
+    color: #999999; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.contact .contact-item:last-child {
+    margin-bottom: 0; /* Sin espaciado inferior en el último elemento */
+}
+
+.contact .contact-form {
+    position: relative; /* Posicionamiento relativo */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.contact .contact-form input {
+    height: 60px; /* Alto del campo de texto */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    border-width: 2px; /* Ancho del borde */
+    border-color: #121518; /* Color del borde */
+}
+
+.contact .contact-form textarea {
+    height: 190px; /* Alto del campo de texto */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    border-width: 2px; /* Ancho del borde */
+    border-color: #121518; /* Color del borde */
+}
+
+.contact .contact-form .btn {
+    padding: 16px 35px; /* Espaciado del botón */
+    font-size: 18px; /* Tamaño de la fuente del botón */
+    font-weight: 500; /* Peso de la fuente del botón */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    color: #aa9166; /* Color del texto del botón */
+    background: #121518; /* Color de fondo del botón */
+    border: 2px solid #aa9166; /* Borde del botón */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.contact .contact-form .btn:hover {
+    color: #121518; /* Color del texto del botón al pasar el ratón */
+    background: #aa9166; /* Color de fondo del botón al pasar el ratón */
+}
+
+
+/*******************************/
+/******* CSS de Página Única ********/
+/*******************************/
+.single {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho del contenedor */
+    padding: 45px 0 65px 0; /* Espaciado vertical */
+}
+
+.single img {
+    margin: 10px 0 15px 0; /* Espaciado */
+}
+
+.single .table,
+.single .list-group {
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.single .ul-group {
+    padding: 0; /* Sin espaciado */
+    list-style: none; /* Sin estilo de lista */
+}
+
+.single .ul-group li {
+    margin-left: 2px; /* Espaciado izquierdo */
+}
+
+.single .ul-group li::before {
+    position: relative; /* Posicionamiento relativo */
+    content: "\f0da"; /* Contenido */
+    font-family: "Font Awesome 5 Free"; /* Fuente */
+    font-weight: 900; /* Peso de la fuente */
+    margin-right: 10px; /* Espaciado derecho */
+}
+
+.single .ol-group {
+    padding-left: 18px; /* Espaciado izquierdo */
+}
+
+
+/*******************************/
+/******** CSS de Boletín ********/
+/*******************************/
+.newsletter {
+    position: relative; /* Posicionamiento relativo */
+    max-width: 900px; /* Ancho máximo */
+    margin: 45px auto -140px auto; /* Espaciado */
+    padding: 30px 15px; /* Espaciado */
+    background: #aa9166; /* Color de fondo */
+    z-index: 1; /* Z-index para asegurar que esté en la parte superior */
+}
+
+.newsletter .section-header {
+    margin-bottom: 25px; /* Espaciado inferior */
+}
+
+.newsletter .section-header h2::before,
+.newsletter .section-header h2::after {
+    border-color: #ffffff; /* Color del borde */
+}
+
+.newsletter .form {
+    position: relative; /* Posicionamiento relativo */
+    max-width: 400px; /* Ancho máximo */
+    margin: 0 auto; /* Centra el formulario */
+}
+
+.newsletter input {
+    height: 50px; /* Alto del campo de texto */
+    border: 2px solid #121518; /* Borde */
+    border-radius: 0; /* Sin esquinas redondeadas */
+}
+
+.newsletter .btn {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 5px; /* Posición en la parte superior */
+    right: 5px; /* Posición a la derecha */
+    height: 40px; /* Alto del botón */
+    padding: 8px 20px; /* Espaciado del botón */
+    font-size: 14px; /* Tamaño de la fuente del botón */
+    font-weight: 500; /* Peso de la fuente del botón */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    color: #aa9166; /* Color del texto del botón */
+    background: #121518; /* Color de fondo del botón */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    border: 2px solid #aa9166; /* Borde del botón */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.newsletter .btn:hover {
+    color: #121518; /* Color del texto del botón al pasar el ratón */
+    background: #aa9166; /* Color de fondo del botón al pasar el ratón */
+}
+
+
+/*******************************/
+/******** CSS de Pie de Página ********/
+/*******************************/
+.footer {
+    position: relative; /* Posicionamiento relativo */
+    margin-top: 45px; /* Espaciado superior */
+    padding-top: 180px; /* Espaciado superior */
+    background: #3198ff; /* Color de fondo */
+    color: #0e0c0c; /* Color del texto */
+}
+
+.footer .footer-about,
+.footer .footer-link,
+.footer .footer-contact {
+    position: relative; /* Posicionamiento relativo */
+    margin-bottom: 45px; /* Espaciado inferior */
+    color: #fbfbfb; /* Color del texto */
+}
+
+.footer .footer-about h2,
+.footer .footer-link h2,
+.footer .footer-contact h2{
+    position: relative; /* Posicionamiento relativo */
+    margin-bottom: 30px; /* Espaciado inferior */
+    font-size: 25px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    color: #110000; /* Color del texto */
+}
+
+.footer .footer-link a {
+    display: block; /* Muestra el enlace en bloque */
+    margin-bottom: 10px; /* Espaciado inferior */
+    color: #fcfafa; /* Color del texto */
+    transition: .3s; /* Transición suave para cambios de estilo */
+}
+
+.footer .footer-link a::before {
+    position: relative; /* Posicionamiento relativo */
+    content: "\f105"; /* Contenido */
+    font-family: "Font Awesome 5 Free"; /* Fuente */
+    font-weight: 900; /* Peso de la fuente */
+    margin-right: 10px; /* Espaciado derecho */
+}
+
+.footer .footer-link a:hover {
+    color: #aa9166; /* Color del texto al pasar el ratón */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.footer .footer-contact p i {
+    width: 25px; /* Ancho del icono */
+}
+
+.footer .footer-social {
+    position: relative; /* Posicionamiento relativo */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.footer .footer-social a {
+    display: inline-block; /* Muestra el enlace en línea */
+}
+
+.footer .footer-social a i {
+    margin-right: 15px; /* Espaciado derecho */
+    font-size: 18px; /* Tamaño de la fuente del icono */
+    color: #000000; /* Color del icono */
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0; /* Sin espaciado */
+}
+
+.footer .footer-social a:hover i {
+    color: #999999; /* Color del icono al pasar el ratón */
+}
+
+.footer .footer-menu .f-menu {
+    position: relative; /* Posicionamiento relativo */
+    padding: 15px 0; /* Espaciado */
+    background: #000000; /* Color de fondo */
+    font-size: 0; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto */
+}
+
+.footer .footer-menu .f-menu a {
+    color: #999999; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin-right: 15px; /* Espaciado derecho */
+    padding-right: 15px; /* Espaciado derecho */
+    border-right: 1px solid rgba(255, 255, 255, .3); /* Borde derecho */
+}
+
+.footer .footer-menu .f-menu a:hover {
+    color: #aa9166; /* Color del texto al pasar el ratón */
+}
+
+.footer .footer-menu .f-menu a:last-child {
+    margin-right: 0; /* Sin espaciado derecho en el último enlace */
+    padding-right: 0; /* Sin espaciado derecho en el último enlace */
+    border-right: none; /* Sin borde derecho en el último enlace */
+}
+
+.footer .copyright {
+    padding: 30px 15px; /* Espaciado */
+}
+
+.footer .copyright p {
+    margin: 0; /* Sin margen */
+    color: #ffffff; /* Color del texto */
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right; /* Alinea a la derecha */
+}
+
+.footer .copyright p a {
+    color: #aa9166; /* Color del texto */
+    font-weight: 500; /* Peso de la fuente */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.footer .copyright p a:hover {
+    color: #ffffff; /* Color del texto al pasar el ratón */
+}
+
+@media (max-width: 768px) {
+    .footer .copyright p,
+    .footer .copyright .col-md-6:last-child p {
+        margin: 5px 0; /* Espaciado */
+        text-align: center; /* Centra el texto */
+    }
+}
+
+/* 
+/* esto es del apartado del widget del chatbot */
+ /* Estilos generales del widget */
+ .popup-widget {
+    position: fixed;
+    top: 10%;
+    right: -400px; /* Inicialmente oculto */
+    width: 400px;
+    height: 500px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgb(255, 255, 255);
+    border-radius: 10px 0 0 10px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Botón para cerrar el widget */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background:  #ff0000;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  /* Clase activa para mostrar el widget */
+  .popup-widget.active {
+    right: 0;
+  }
+
+  /* Botón para abrir el widget */
+  .open-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .open-btn img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgb(255, 0, 0);
+    transition: transform 0.3s ease;
+  }
+
+  .open-btn img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Estilos para el iframe */
+  .widget-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  } 
+
