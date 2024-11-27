@@ -24,6 +24,22 @@
 </head>
 
 <body>
+    <!-- Botón para abrir el widget con una imagen -->
+  <button class="open-btn" onclick="openWidget()">
+    <img src="img\1.png" alt="Abrir Widget">
+  </button>
+
+  <!-- Widget ventana emergente -->
+  <div id="popup-widget" class="popup-widget">
+    <!-- Botón para cerrar el widget -->
+    <button class="close-btn" onclick="closeWidget()">✖</button>
+
+    <!-- Contenido del widget: Incrustar la web -->
+    <iframe src="https://chatbot-kdxwd3p6hjwm8mtee7xgkq.streamlit.app/?embedded=true"
+      class="widget-iframe" 
+      title="Chatbot">
+    </iframe>
+  </div>
     <div class="wrapper">
         <!-- Inicio de la Barra Superior -->
         <div class="top-bar">
@@ -75,13 +91,9 @@
                             <a href="team.html" class="nav-item nav-link">Abogados</a>
                             <a href="portfolio.html" class="nav-item nav-link">Estudios de Caso</a>
                             
-                            <a href="https://chatbot-kdxwd3p6hjwm8mtee7xgkq.streamlit.app"  class="nav-item nav-link">Chat_Bot</a>
-                                
-                           
-                            
                         </div>
                         <div class="ml-auto">
-                            <a class="btn" href="https://lawyer-app.netlify.app/iniciar-sesion">Iniciar sesión</a>
+                            <a class="btn" href="https://lawyer-app.netlify.app/iniciar-sesion" class="nav-item nav-link">Iniciar sesión</a>
                         </div>
                     </div>
                 </nav>
@@ -102,7 +114,7 @@
                     <div class="carousel-caption">
                         <h1 class="animated fadeInLeft">Luchamos por tu justicia</h1>
                         <p class="animated fadeInRight">Nuestros abogados tienen experiencia en casos de derecho laboral y pueden ayudarte a obtener la compensación que mereces.</p>
-                        <a class="btn animated fadeInUp" href="https://chatbot-kdxwd3p6hjwm8mtee7xgkq.streamlit.app">Solicitar Consulta</a>
+                        <a class="btn animated fadeInUp" onclick="openWidget()">Solicitar Consulta</a>
                     </div>
                 </div>
 
@@ -111,7 +123,7 @@
                     <div class="carousel-caption">
                         <h1 class="animated fadeInLeft">Estamos preparados para oponernos por ti</h1>
                         <p class="animated fadeInRight">Nuestros abogados tienen experiencia en casos de derecho penal y pueden ayudarte a defender tus derechos.</p>
-                        <a class="btn animated fadeInUp" href="https://chatbot-kdxwd3p6hjwm8mtee7xgkq.streamlit.app">Solicitar Consulta</a>
+                        <a class="btn animated fadeInUp" onclick="openWidget()">Solicitar Consulta</a>
                     </div>
                 </div>
 
@@ -120,7 +132,7 @@
                     <div class="carousel-caption">
                         <h1 class="animated fadeInLeft">Luchamos por tus privilegios</h1>
                         <p class="animated fadeInRight">Nuestros abogados tienen experiencia en casos de derecho de familia y pueden ayudarte a proteger tus derechos.</p>
-                        <a class="btn animated fadeInUp" href="https://chatbot-kdxwd3p6hjwm8mtee7xgkq.streamlit.app">Solicitar Consulta</a>
+                        <a class="btn animated fadeInUp" onclick="openWidget()">Solicitar Consulta</a>
                     </div>
                 </div>
             </div>
@@ -686,5 +698,6 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

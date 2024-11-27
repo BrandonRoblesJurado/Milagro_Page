@@ -24,6 +24,22 @@
 </head>
 
 <body>
+     <!-- Botón para abrir el widget con una imagen -->
+  <button class="open-btn" onclick="openWidget()">
+    <img src="img\1.png" alt="Abrir Widget">
+  </button>
+
+  <!-- Widget ventana emergente -->
+  <div id="popup-widget" class="popup-widget">
+    <!-- Botón para cerrar el widget -->
+    <button class="close-btn" onclick="closeWidget()">✖</button>
+
+    <!-- Contenido del widget: Incrustar la web -->
+    <iframe src="https://chatbot-kdxwd3p6hjwm8mtee7xgkq.streamlit.app/?embedded=true"
+      class="widget-iframe" 
+      title="Chatbot">
+    </iframe>
+  </div>
     <div class="wrapper">
         <!-- Inicio de la Barra Superior -->
         <div class="top-bar">
@@ -74,8 +90,6 @@
                             <a href="service.html" class="nav-item nav-link">Práctica</a>
                             <a href="team.html" class="nav-item nav-link active">Abogados</a>
                             <a href="portfolio.html" class="nav-item nav-link">Estudios de Caso</a>
-                            <a href="https://chatbot-kdxwd3p6hjwm8mtee7xgkq.streamlit.app"  class="nav-item nav-link">Chat_Bot</a>
-                            
                             
                         </div>
                         <div class="ml-auto">
@@ -262,5 +276,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
